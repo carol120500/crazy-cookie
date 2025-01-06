@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8993cb86-dafe-493b-b3d9-ca500132faaa" name="变更" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2iMbXxxcND11yLDEu3OCISI1ZOP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zhaojingyi/Library/Mobile Documents/com~apple~CloudDocs/cnn-lstm-kans/cnn-lstm-kans model&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="8993cb86-dafe-493b-b3d9-ca500132faaa" name="变更" comment="" />
+      <created>1719303437637</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719303437637</updated>
+      <workItem from="1719303438924" duration="20000" />
+      <workItem from="1719303460963" duration="18000" />
+      <workItem from="1719304083070" duration="11000" />
+      <workItem from="1719304172632" duration="331000" />
+      <workItem from="1720253587882" duration="3221000" />
+      <workItem from="1720614739748" duration="728000" />
+      <workItem from="1720772972907" duration="53000" />
+      <workItem from="1720773046250" duration="1903000" />
+      <workItem from="1720955918155" duration="866000" />
+      <workItem from="1721206149109" duration="35000" />
+      <workItem from="1721207278435" duration="4000" />
+      <workItem from="1728625375034" duration="1306000" />
+      <workItem from="1728628366999" duration="23000" />
+      <workItem from="1728628542902" duration="686000" />
+      <workItem from="1728629259369" duration="3000" />
+      <workItem from="1728629270197" duration="6000" />
+      <workItem from="1728629286147" duration="12000" />
+      <workItem from="1736145348846" duration="607000" />
+      <workItem from="1736145965116" duration="2000" />
+      <workItem from="1736145982690" duration="1000" />
+      <workItem from="1736146126919" duration="46000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/kanliner/KAN.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
