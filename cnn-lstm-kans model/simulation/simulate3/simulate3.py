@@ -43,7 +43,7 @@ simulated_data['Date'] = time_range.strftime('%Y/%m/%d %H:%M')
 # 保存生成的数据
 simulated_data.to_csv('simulated_data_with_gev_limit_0_1_3.csv', index=False)
 
-# 输出前   条数据并保存为新数据集
+# 输出前2160条数据并保存为新数据集
 subset_data = simulated_data.head(2160)
 subset_data.to_csv('simulated_data_k=0.3.csv', index=False)
 print(subset_data.head())
