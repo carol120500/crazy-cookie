@@ -1,10 +1,6 @@
 In this study, Venice water level was chosen as the forecast target, and the data set from 00:00 January 1, 2022 to 00:00 January 1, 2024 was divided into 80% training set and 20% test set. The input features for model learning and training include hourly tide level, wind speed, atmospheric pressure, air temperature, sea water temperature, solar radiation, relative humidity, and accumulated precipitation data recorded at the Piattaforma site, as well as water level data in the previous hour, and the output is the water level forecast in the next hour. The zero datum point is determined by the Punta Salute tidal monitoring station. The model is implemented in Python and the predicted water level is compared to the original water level.
 CNN and LSTM combined to build the CNN-LSTM model: CNN extracts local time features (such as tidal and wind changes), which are then passed on to LSTM for time series predictions to predict water levels in the next hour. Kolmogorov-Arnold Network (KANs) is an innovative neural network model that enhances nonlinear modeling capabilities by transferring the node activation function of traditional multilayer perceptrons (MLPS) to the edge. KANs is especially suitable for complex time series data and can effectively capture nonlinear patterns in the data. Therefore, in this study, the multi-layer perceptron (MLP) in the CNN-LSTM model was replaced by KANs to improve model performance and interpretability, improve its accuracy, and accelerate its convergence rate.
 
- 
- Water level prediction process
-![image](https://github.com/user-attachments/assets/fa5e1310-aa48-4743-b640-42b1bf095b71)
-
-
+![image](https://github.com/user-attachments/assets/79ba2545-63e9-416f-b953-ea62cb302dab)
 
 The performance of CNN-LSTM-KAN model is compared with the traditional LSTM model, LSTM-KAN model and CNN-LSTM model. By calculating the root mean square error (RMSE), Nash-Schutley efficiency (NSE), mean square error (MSE), determination coefficient (R²) and model training time, etc. The experimental results show that compared with traditional LSTM, LSTM-KAN and CNN-LSTM models, CNN-LSTM-KANS model shows higher prediction accuracy and robustness under different seasons and different proportions of training data. When the data set is reduced to 50% or less, the model can still maintain a high predictive performance.
