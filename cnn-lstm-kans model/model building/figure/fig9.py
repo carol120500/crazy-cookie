@@ -1,40 +1,48 @@
 import matplotlib.pyplot as plt
-import pandas as pd
+import numpy as np
 
 # 数据
-data = {
-    "training set percentage": [70, 60, 50],
-    "LSTM model": [(0.93, 0.00446), (0.95, 0.00515), (0.94, 0.00446)],
-    "LSTM-KANS model": [(0.97, 0.00115), (0.99, 0.00178), (0.99, 0.00117)],
-    "CNN-LSTM model": [(0.95, 0.00281), (0.96, 0.00337), (0.97, 0.00281)],
-    "CNN-LSTM-KANS model": [(0.98, 0.00069), (0.98, 0.000144), (0.99, 0.00013)]
-}
+percentage = [70, 60, 50]
+lstm_r2 = [0.95, 0.95, 0.94]
+lstm_mse = [0.0038, 0.00422, 0.00446]
+lstm_kans_r2 = [0.99, 0.98, 0.98]
+lstm_kans_mse = [0.00113, 0.00115, 0.00173]
+cnn_lstm_r2 = [0.98, 0.98, 0.95]
+cnn_lstm_mse = [0.00119, 0.002, 0.00337]
+cnn_lstm_kans_r2 = [0.99, 0.99, 0.98]
+cnn_lstm_kans_mse = [0.00072, 0.00069, 0.0013]
 
-# 创建DataFrame
-df = pd.DataFrame(data)
+# 创建子图，1行2列
+fig, axs = plt.subplots(1, 2, figsize=(14, 6))
 
-# 提取R2和MSE数据
-r2 = df.drop(columns=["training set percentage"]).apply(lambda x: x[0])
-mse = df.drop(columns=["training set percentage"]).apply(lambda x: x[1])
+# 颜色定义
+colors = ['blue', 'orange', 'green', 'red']
+models = ['LSTM', 'LSTM-KANs', 'CNN-LSTM', 'CNN-LSTM-KANs']
 
-# 可视化R2和MSE
-fig, ax1 = plt.subplots(figsize=(10, 6))
+# 绘制R²折线图
+axs[0].plot(percentage, lstm_r2, marker='o', label='LSTM', color='blue')
+axs[0].plot(percentage, lstm_kans_r2, marker='o', label='LSTM-KANS', color='orange')
+axs[0].plot(percentage, cnn_lstm_r2, marker='o', label='CNN-LSTM', color='green')
+axs[0].plot(percentage, cnn_lstm_kans_r2, marker='o', label='CNN-LSTM-KANS', color='red')
 
-# R2图
-ax1.bar(df['training set percentage'], r2, color='skyblue', label='R2')
-ax1.set_xlabel('Training Set Percentage')
-ax1.set_ylabel('R2', color='skyblue')
-ax1.tick_params(axis='y', labelcolor='skyblue')
+axs[0].set_title('MSE Performance by Training Set Percentage')
+axs[0].set_xlabel('Training Set Percentage')
+axs[0].set_ylabel('R²')
+axs[0].legend(loc='best')
+axs[0].grid(True)
 
-# MSE图
-ax2 = ax1.twinx()
-ax2.plot(df['training set percentage'], mse, color='red', marker='o', label='MSE')
-ax2.set_ylabel('MSE', color='red')
-ax2.tick_params(axis='y', labelcolor='red')
+# 绘制MSE折线图
+axs[1].plot(percentage, lstm_mse, marker='o', label='LSTM', color='blue')
+axs[1].plot(percentage, lstm_kans_mse, marker='o', label='LSTM-KANS', color='orange')
+axs[1].plot(percentage, cnn_lstm_mse, marker='o', label='CNN-LSTM', color='green')
+axs[1].plot(percentage, cnn_lstm_kans_mse, marker='o', label='CNN-LSTM-KANS', color='red')
 
-# 标题和图例
-plt.title('Model Performance Comparison')
-fig.legend(loc='upper right', bbox_to_anchor=(0.9, 0.9))
-plt.grid(True)
+axs[1].set_title('MSE Performance by Training Set Percentage')
+axs[1].set_xlabel('Training Set Percentage')
+axs[1].set_ylabel('MSE')
+axs[1].legend(loc='best')
+axs[1].grid(True)
+
+# 调整布局并显示
 plt.tight_layout()
 plt.show()
